@@ -14,5 +14,4 @@ def solution(n):
                 answer.append(i)
             if i != n // i and is_prime(n // i):
                 answer.append(n // i)
-    print(answer)
     return sorted(answer)
