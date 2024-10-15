@@ -1,10 +1,3 @@
 def solution(rank, attendance):
-    o_dict = dict(zip(rank, attendance))
-    s_dict = sorted(o_dict.items())
-    student_list = []
-    for i, j in s_dict:
-        if j:
-            student_list.append(i)
-        if len(student_list)==3:
-            break
-    return rank.index(student_list[0]) * 10000 + rank.index(student_list[1]) * 100 + rank.index(student_list[2])
+    s_list = sorted([(v, i) for i, v in enumerate(rank) if attendance[i]])
+    return s_list[0][1] * 10000 + s_list[1][1] * 100 + s_list[2][1]
