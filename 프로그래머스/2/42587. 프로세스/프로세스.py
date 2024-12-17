@@ -8,7 +8,7 @@ def solution(priorities, location):
     # for i, priority in enumerate(priorities):
     #     print('index is {}'.format(i))
     #     print('priority is {}'.format(priority))
-    while queue:
+    while True:
         idx, priority = queue[0]
         if priority == priorities[0]:
             queue.pop(0)
