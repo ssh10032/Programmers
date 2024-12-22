@@ -13,10 +13,8 @@ def solution(bridge_length, weight, truck_weights):
             if c_num+1<=bridge_length and c_weight+truck_weights[0]<=weight:
                 truck_weight = truck_weights.pop(0)
                 t_queue.append([truck_weight, c_time])
-                
                 c_num+=1
                 c_weight+=truck_weight
-        
         c_time+=1
         if not t_queue and not truck_weights:
             return c_time
