@@ -7,10 +7,6 @@ def solution(scoville, K):
     new_v = 0
     while scoville[0]<K:
         if len(scoville)==1:
-            print(all(scoville)<K)
-            print(try_num)
-            print(new_v)
-            print(scoville)
             return -1
         v1 = heapq.heappop(scoville)
         v2 = heapq.heappop(scoville)
